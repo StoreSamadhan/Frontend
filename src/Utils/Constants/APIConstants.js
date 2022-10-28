@@ -1,7 +1,11 @@
+// export const BASE_URL =
+//   "https://store-samadhan-backend.centralindia.cloudapp.azure.com/api/v1";
+// export const CLOUD_URL =
+//  "https://storesamadhan-storage.centralindia.cloudapp.azure.com/images";
 export const BASE_URL =
-  "https://store-samadhan-backend.centralindia.cloudapp.azure.com/api/v1";
+  "http://locahost:5000/api/v1";
 export const CLOUD_URL =
-  "https://storesamadhan-storage.centralindia.cloudapp.azure.com/images";
+  "http://locahost:5000/images";
 export const AUTH_URL = `${BASE_URL}/auth`;
 export const STORAGE_URL = `${BASE_URL}/storage`;
 export const USER_URL = `${BASE_URL}/user`;
