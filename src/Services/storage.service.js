@@ -15,6 +15,7 @@ export const fetchFilteredStorage = async (
     const { data } = await axios.get(`${GET_FILTERED_STORAGE_URL}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
       params: filter
         ? {
@@ -34,6 +35,7 @@ export const fetchStorageInfoById = async (id, accessToken) => {
     const { data } = await axios.get(`${GET_STORAGE_INFO_BY_ID_URL}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
       params: {
         storageId: id,
@@ -53,6 +55,7 @@ export const updateStorage = async (storageData, accessToken) => {
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -67,6 +70,7 @@ export const fetchStorageBookings = async (accessToken) => {
     const { data } = await axios.get(`${GET_STORAGE_BOOKINGS_URL}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
     });
     return data;

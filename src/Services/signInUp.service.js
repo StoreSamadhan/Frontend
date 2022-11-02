@@ -24,12 +24,14 @@ export const signUpUser = async ({ email, password, userData, isStorage }) => {
       const { data } = await axios.post(SIGNUP_STORAGE_URL, userData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          "Access-Control-Allow-Origin": "*",
         },
       });
     } else {
       const { data } = await axios.post(SIGNUP_USER_URL, userData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          'Access-Control-Allow-Origin': '*'
         },
       });
     }

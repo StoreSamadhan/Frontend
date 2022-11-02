@@ -12,6 +12,7 @@ export const getUser = async (accessToken) => {
     const { data } = await axios.get(GET_USER_URL, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
     });
     return data;
@@ -28,6 +29,7 @@ export const addReview = async (review, accessToken) => {
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -45,6 +47,7 @@ export const updateUser = async (userData, accessToken) => {
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -59,6 +62,7 @@ export const getUserBookings = async (accessToken) => {
     const { data } = await axios.get(`${GET_USER_BOOKINGS_URL}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
     });
     return data;
