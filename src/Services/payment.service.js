@@ -31,6 +31,7 @@ export const paymentInitialization = async (
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          'Access-Control-Allow-Origin': '*'
         },
       }
     );
@@ -107,6 +108,7 @@ export const PaymentVerification = async (
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
+          'Access-Control-Allow-Origin': '*'
         },
       }
     );
